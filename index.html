@@ -4,10 +4,16 @@
 	<title>Trivia Game</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" 
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+		crossorigin="anonymous">
 
 	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js" 
+		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" 
+		crossorigin="anonymous">	
+	</script>
 
 	<!-- style.css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -17,9 +23,52 @@
 
 </head>
 <body>
-	<div id="bg-quad-1" class="bg-quad"></div>
-	<div id="bg-quad-2" class="bg-quad"></div>
-	<div id="bg-quad-3" class="bg-quad"></div>
-	<div id="bg-quad-4" class="bg-quad"></div>
+	<div id="bg-rotating">
+		<div id="bg-quad-1" class="bg-quad"></div>
+		<div id="bg-quad-2" class="bg-quad"></div>
+		<div id="bg-quad-3" class="bg-quad"></div>
+		<div id="bg-quad-4" class="bg-quad"></div>
+	</div>
+	
+	<div id="screen-main">
+		<button id="btn-start" class="btn btn-defualt btn-lg" onclick="LoadScreen(screens[2])">Start</button>
+		<button id="btn-about" class="btn btn-defualt btn-lg" onclick="LoadScreen(screens[1])">About</button>	
+	</div>
+
+	<div class="not-main" id="screen-about">
+		<div id="jt-about" class="jumbotron">
+			<label>Developed by Maxwell Schmelling</label>
+			<br>
+			<label>Technologies used:</label>
+			<label>HTML5, CSS, JavaScript, Bootstrap, jQuery</label>
+			<br>
+			<br>
+			<br>
+			<button id="btn-back" class="btn btn-defualt btn-lg" onclick="LoadScreen(screens[0])">Back</button>	
+		</div>
+	</div>
+
+	<div class="not-main" id="screen-name">
+		<div id="jt-name" class="jumbotron">
+			<div id="what-name">
+				<label id="h4-name">What is your name?</label>
+				<input id="input-name" type="text" maxlength="40" placeholder="Your Name...">
+				<br>
+				<br>
+				<br>
+				<button id="btn-back" class="btn btn-defualt btn-lg" onclick="LoadScreen(screens[3])">Let's Go!</button>	
+			</div>
+		</div>
+	</div>
+
+	<div class="not-main" id="screen-question">
+		<div id="jt-question" class="jumbotron">
+			
+		</div>
+	</div>
+
+	<div class="not-main" id="screen-result"></div>
+
+	<div class="not-main" id="screen-continue"></div>
 </body>
 </html>

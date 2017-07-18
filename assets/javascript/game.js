@@ -3,6 +3,8 @@
 // Maxwell Schmelling
 // 
 
+
+
 // MAIN
 $( document ).ready(function() {
     LoadScreen(screens[0]);
@@ -12,12 +14,16 @@ $( document ).ready(function() {
 
 
 // GLOABAL VARIABLES
-
 	// Background Color Rotation Variables
 	var rotateBG = false;
 	var colorIterator = 1;
 	var bgColors = ["red", "blue", "yellow", "green"];
 	var rotateBGinterval;
+
+	// game variables
+	var correct = 0;
+	var wrong = 0;
+	var name = "Player";
 // END GLOBAL VARIABLES
 
 
@@ -30,8 +36,6 @@ var screens = [
 	{id: 3, title: "question", rotateBG: false},
 	{id: 4, title: "result", rotateBG: false},
 	{id: 5, title: "continue", rotateBG: true}]
-
-
 
 var questions = [	
 	{id: 0, question: "What is the question?", answers: ["answer1","answer2","answer3","answer4"], correctAnswer: false},
@@ -50,11 +54,64 @@ var questions = [
 
 // FUNCTION DEFINITIONS
 function LoadScreen(_screen) {
-	console.log(_screen.title);
-	if(_screen.rotateBG) {
-		rotateBGinterval = setInterval(RotateBackgroundColors, 1000);
+	switch(_screen.id) {
+		// About
+		case 0:
+			console.log(_screen.title + " screen loaded")
+			clearInterval(rotateBGinterval);
+			rotateBGinterval = setInterval(RotateBackgroundColors, 1500);
+
+			$("#screen-main").css({"display": "inline"})
+			$("#screen-about").css({"display": "none"})
+
+			break;
+		// About
+		case 1:
+			console.log(_screen.title + " screen loaded")
+
+			$("#screen-main").css({"display": "none"})
+			$("#screen-about").css({"display": "inline"})
+
+			break;
+		// Name
+		case 2:
+			console.log(_screen.title + " screen loaded")
+
+			$("#screen-main").css({"display": "none"})
+			$("#screen-name").css({"display": "inline"})
+
+			break;
+		// Question
+		case 3:
+			console.log(_screen.title + " screen loaded")
+			clearInterval(rotateBGinterval);
+
+			$("#screen-name").css({"display": "none"})
+			$("#screen-question").css({"display": "inline"})
+
+			break;
+		// Result
+		case 4:
+			console.log(_screen.title + " screen loaded")
+			clearInterval(rotateBGinterval);
+
+			$("#screen-main").css({"display": "none"})
+			$("#screen-name").css({"display": "inline"})
+
+			break;
+		// Continue
+		case 5:
+			console.log(_screen.title + " screen loaded")
+			clearInterval(rotateBGinterval);
+			rotateBGinterval = setInterval(RotateBackgroundColors, 1500);
+
+			$("#screen-main").css({"display": "none"})
+			$("#screen-name").css({"display": "inline"})
+
+			break;
+		default: break;
 	}
-	else clearInterval(rotateBGinterval);
+
 }
 
 

@@ -1,5 +1,62 @@
-body {
+html, body {
+	height: 100%;
 	background-color: white;
+	margin:0;
+	padding:0;
+	font-family: "Arial", Georgia, Sans-Serif;
+}
+
+button {
+	position: fixed;
+	z-index: 1;
+	margin:0 auto;
+	width: 25%;
+	top: 50%;
+	left: 50%;
+}
+
+label {
+	display: block;
+	text-align: center;
+}
+
+#what-name {
+	text-align: center;
+}
+
+#btn-start {
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -125%); 
+}
+
+#btn-about {
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, 25%); 
+}
+
+.jumbotron {
+	position: fixed;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	margin:0 auto;
+	-webkit-transform: translate(-50%, -50%); 
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    width: 75%;
+}
+
+.not-main {
+	display: none;
+}
+
+#btn-back {
+	top: 95%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -125%); 
 }
 
 .bg-quad {
@@ -8,7 +65,10 @@ body {
     left: 0px;
     width: 50%;
     height: 50%;
-    z-index: 1;
+    z-index: 0;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
 }
 
 #bg-quad-1 {

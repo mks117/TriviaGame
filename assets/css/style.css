@@ -1,0 +1,36 @@
+body {
+	background-color: white;
+}
+
+.bg-quad {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+}
+
+#bg-quad-1 {
+	top: 0px;
+	left: 0px;
+	background-color: red;
+}
+
+#bg-quad-2 {
+	top: 0px;
+	left: 50%;
+	background-color: blue;
+}
+
+#bg-quad-3 {
+	top: 50%;
+	left: 50%;
+	background-color: yellow;
+}
+
+#bg-quad-4 {
+	top: 50%;
+	left: 0px;
+	background-color: green;
+}

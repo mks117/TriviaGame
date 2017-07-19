@@ -6,14 +6,14 @@ html, body {
 	font-family: "Arial", Georgia, Sans-Serif;
 }
 
-button {
+/*button {
 	position: fixed;
 	z-index: 1;
 	margin:0 auto;
 	width: 25%;
 	top: 50%;
 	left: 50%;
-}
+}*/
 
 label {
 	display: block;
@@ -24,13 +24,30 @@ label {
 	text-align: center;
 }
 
+#lbl-what-name {
+	top: 20%;
+}
+
+#lbl-question-number {
+	position: fixed;
+	
+}
+
 #btn-start {
+	position: fixed;
+	z-index: 1;
+	margin:0 auto;
+	width: 25%;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -125%); 
 }
 
 #btn-about {
+	position: fixed;
+	z-index: 1;
+	margin:0 auto;
+	width: 25%;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, 25%); 
@@ -47,6 +64,7 @@ label {
     border-width: 5px;
     border-color: black;
     width: 75%;
+    height: 30%;
 }
 
 .not-main {
@@ -54,9 +72,53 @@ label {
 }
 
 #btn-back {
+	position: fixed;
+	z-index: 1;
+	margin:0 auto;
+	width: 25%;
 	top: 95%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -125%); 
+}
+
+#btn-answer0 {
+	
+	position: fixed;
+	z-index: 1;
+	margin:0 auto;
+	width: 25%;
+	top: 45%;
+	left: 20%;
+}
+
+#btn-answer1 {
+
+	position: fixed;
+	z-index: 1;
+	margin:0 auto;
+	width: 25%;
+	top: 45%;
+	left: 60%;
+}
+
+#btn-answer2 {
+	
+	position: fixed;
+	z-index: 1;
+	margin:0 auto;
+	width: 25%;
+	top: 70%;
+	left: 20%;
+}
+
+#btn-answer3 {
+	
+	position: fixed;
+	z-index: 1;
+	margin:0 auto;
+	width: 25%;
+	top: 70%;
+	left: 60%;
 }
 
 .bg-quad {

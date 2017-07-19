@@ -31,8 +31,10 @@
 	</div>
 	
 	<div id="screen-main">
-		<button id="btn-start" class="btn btn-defualt btn-lg" onclick="LoadScreen(screens[2])">Start</button>
-		<button id="btn-about" class="btn btn-defualt btn-lg" onclick="LoadScreen(screens[1])">About</button>	
+		<button id="btn-start" class="btn btn-defualt btn-lg" 
+			onclick="LoadScreen(screens[2])">Start</button>
+		<button id="btn-about" class="btn btn-defualt btn-lg" 
+			onclick="LoadScreen(screens[1])">About</button>	
 	</div>
 
 	<div class="not-main" id="screen-about">
@@ -44,30 +46,64 @@
 			<br>
 			<br>
 			<br>
-			<button id="btn-back" class="btn btn-defualt btn-lg" onclick="LoadScreen(screens[0])">Back</button>	
+			<button id="btn-back" class="btn btn-defualt btn-lg" 
+				onclick="LoadScreen(screens[0])">Back</button>	
 		</div>
 	</div>
 
 	<div class="not-main" id="screen-name">
 		<div id="jt-name" class="jumbotron">
 			<div id="what-name">
-				<label id="h4-name">What is your name?</label>
-				<input id="input-name" type="text" maxlength="40" placeholder="Your Name...">
+				<label id="lbl-what-name">What is your name?</label>
+				<input id="input-name" type="text" maxlength="40" 
+					placeholder="Your Name...">
 				<br>
 				<br>
 				<br>
-				<button id="btn-back" class="btn btn-defualt btn-lg" onclick="LoadScreen(screens[3])">Let's Go!</button>	
+				<button id="btn-back" class="btn btn-defualt btn-lg" 
+					onclick="LoadScreen(screens[3])">Let's Go!</button>	
 			</div>
 		</div>
 	</div>
 
 	<div class="not-main" id="screen-question">
 		<div id="jt-question" class="jumbotron">
-			
+			<div>
+				<label id="lbl-question-number">Question #1</label>
+				<label id="lbl-question">This is a question.</label>
+				<br>
+				<div class="row">
+					<div class="col-xs-6">
+						<button id="btn-answer0" class="btn btn-defualt btn-lg" 
+							onclick="">answer 0</button>
+						<button id="btn-answer1" class="btn btn-defualt btn-lg" 
+							onclick="">answer 1</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<button id="btn-answer2" class="btn btn-defualt btn-lg" 
+							onclick="">answer 2</button>
+						<button id="btn-answer3" class="btn btn-defualt btn-lg" 
+							onclick="">answer 3</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="not-main" id="screen-result"></div>
+	<div class="not-main" id="screen-result">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="jumbotron">
+						<h1 id="game-over-message"></h1>
+						<button id="btn-continue" onclick="LoadScreen(screens[0])">Return to Main Menu</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="not-main" id="screen-continue"></div>
 </body>
